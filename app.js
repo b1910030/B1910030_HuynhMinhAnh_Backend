@@ -22,7 +22,7 @@ app.use((req, res, next) => {
     return next(new ApiError(404, "Resource not found"));
 });
 
-app.use((err, req, res, next) => {
+app.use((error, req, res, next) => {
     //Middleware xu ly loi tap trung.
     //Trong cac doan code xu ly o cac route, goi next(error)
     //   se chuyen ve middleware xu ly loi nay
