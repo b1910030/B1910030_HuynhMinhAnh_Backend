@@ -18,6 +18,8 @@ exports.create = async (req, res, next) => {
     }
 };
 
+
+
 exports.findAll = async (req, res, next) => {
     let documents = [];
 
@@ -114,7 +116,7 @@ exports.deleteAll = async (_req, res, next) => {
 exports.findAllFavorite = async (_req, res, next) => {
     try {
         const contactService = new ContactService(MongoDB.client);
-        const document = await contactService.findFavorite();
+        const documents = await contactService.findFavorite();
         return res.send(documents);
     } catch (error) {
         return next(

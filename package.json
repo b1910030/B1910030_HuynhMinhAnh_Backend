@@ -1,14 +1,15 @@
 {
-  "name": "contactkbook-backend",
+  "name": "b1900244-backen",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "start": "nodemon server.js"
   },
-  "author": "b1910030",
+  "author": "phucb1900244",
   "license": "ISC",
+  "description": "",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "mongodb": "^5.0.1"

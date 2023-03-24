@@ -1,4 +1,4 @@
-const { MongoClient } = require("mongodb");
+const  { MongoClient }  = require("mongodb");
 
 class MongoDB {
     static connect = async (uri) => {

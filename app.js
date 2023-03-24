@@ -9,7 +9,7 @@ const contactsRouter = require("./app/routes/contact.route");
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (reg, res) => {
+app.get("/", (req, res) => {
     res.json({ message: "Welcome to contact book application."});
 });
 
@@ -27,8 +27,10 @@ app.use((error, req, res, next) => {
     //Trong cac doan code xu ly o cac route, goi next(error)
     //   se chuyen ve middleware xu ly loi nay
     return res.status(error.statusCode || 500).json({
-        message: error.message || "Internal Server Error1",
+        message: error.message || "Internal Server Error",
     });
 });
+
+app.use("/api/contacts ", contactsRouter);
 
 module.exports = app;
